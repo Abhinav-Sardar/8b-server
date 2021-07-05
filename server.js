@@ -16,7 +16,6 @@ app.get("/artwork", (req, res) => {
   res.json(paintings);
 });
 app.post("/artwork", (req, res) => {
-  console.log(req.body);
   res
     .json({
       message: "Recived!",
