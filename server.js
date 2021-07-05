@@ -1,14 +1,13 @@
 const express = require("express");
 const app = express();
-const path = require("path");
-const PORT = process.env.PORT | 6694;
+const PORT = process.env.PORT || 6694;
 const helmet = require("helmet");
 const cors = require("cors");
 app.use(express.json());
 app.use(helmet());
 app.use(cors());
 app.listen(PORT, () => {
-  console.log("Listening on http://localhost:6694");
+  console.log("Listening on http://localhost:" , PORT);
 });
 app.get("/artwork", (req, res) => {
   res.json(paintings);
